@@ -2,10 +2,84 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=claude-chat-viewer-2_0_rgon.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Claude 对话浏览器 · 本地离线</title>
+<style>
+:root{
+  --primary:#D97757; --primary-dark:#C4653A; --primary-light:#F5E6D3;
+  --bg:#FAF8F5; --surface:#FFFFFF; --text-1:#1A1A1A; --text-2:#4A4543; --text-3:#9C9590;
+  --sand:#E8DDD3; --line:rgba(232,221,211,.85);
+  --font-display:Georgia,'Songti SC','Noto Serif CJK SC',serif;
+  --font-body:system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-1);font-family:var(--font-body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:56px 22px 80px}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.brand h1{font-family:var(--font-display);font-size:30px;margin:0;letter-spacing:.5px}
+.tag{display:inline-block;background:var(--primary-light);color:var(--primary-dark);border-radius:999px;padding:3px 14px;font-size:13px;margin:10px 0 6px}
+.lede{color:var(--text-2);font-size:17px;margin:8px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:13px 30px;font-size:16px;font-weight:600;transition:transform .2s, box-shadow .2s}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-dark);transform:translateY(-1px);box-shadow:0 6px 18px rgba(217,119,87,.3)}
+.btn.ghost{background:var(--surface);color:var(--text-1);border:1px solid var(--sand)}
+.btn.ghost:hover{border-color:var(--primary);color:var(--primary-dark)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:18px}
+.card h2{font-size:18px;margin:0 0 12px;font-family:var(--font-display)}
+.card ul{margin:0;padding-left:20px;color:var(--text-2)}
+.card li{margin:6px 0}
+.card ol{margin:0;padding-left:20px;color:var(--text-2)}
+.card li::marker{color:var(--primary);font-weight:700}
+code{background:var(--primary-light);border-radius:6px;padding:1px 7px;font-size:14px;color:var(--primary-dark)}
+.foot{margin-top:40px;color:var(--text-3);font-size:13.5px;text-align:center}
+.foot a{color:var(--primary-dark)}
+@media(max-width:520px){.brand h1{font-size:24px}.btn{flex:1;text-align:center}}
+</style>
 </head>
 <body>
-<p>正在打开 Claude 对话浏览器……如果没有自动跳转，请<a href="claude-chat-viewer-2_0_rgon.html">点击这里</a>。</p>
+<div class="wrap">
+  <div class="brand">
+    <svg width="44" height="44" viewBox="0 0 40 40" aria-hidden="true">
+      <g stroke="#D97757" stroke-width="3.1" stroke-linecap="round">
+        <path d="M20 6.5 V15"/><path d="M20 25 V33.5"/>
+        <path d="M6.5 20 H15"/><path d="M25 20 H33.5"/>
+        <path d="M10.6 10.6 L16.4 16.4"/><path d="M23.6 23.6 L29.4 29.4"/>
+        <path d="M29.4 10.6 L23.6 16.4"/><path d="M16.4 23.6 L10.6 29.4"/>
+      </g>
+    </svg>
+    <h1>Claude 对话浏览器</h1>
+  </div>
+  <span class="tag">单文件 · 完全离线 · 数据不出本机</span>
+  <p class="lede">把从 Claude 官方导出的数据包拖进来，在本地优雅地浏览、搜索你的全部历史对话。</p>
+
+  <div class="btns">
+    <a class="btn primary" href="claude-chat-viewer-2_0_rgon.html">🚀 在线试用</a>
+    <a class="btn ghost" href="https://github.com/leyu3574-spec/claude-chat-viewer/releases/download/v2.0/claude-chat-viewer-2_0_rgon.html">⬇️ 下载单文件</a>
+    <a class="btn ghost" href="https://github.com/leyu3574-spec/claude-chat-viewer">⭐ GitHub 仓库</a>
+  </div>
+
+  <div class="card">
+    <h2>✨ 特点</h2>
+    <ul>
+      <li>只有一个 HTML 文件，无需安装，浏览器打开即用</li>
+      <li>所有解析和渲染都在本地完成，不上传、不联网</li>
+      <li>按时间线浏览全部对话，支持全文搜索</li>
+      <li>虚拟滚动，上万条消息也不卡</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>📖 三步上手</h2>
+    <ol>
+      <li>在 <code>claude.ai</code> 设置 → 隐私中申请「导出数据」，下载包含 <code>conversations</code> 的 zip 包</li>
+      <li>点击上方「在线试用」，或下载单文件后双击打开</li>
+      <li>把 zip 包直接拖进页面，即可浏览、搜索</li>
+    </ol>
+  </div>
+
+  <p class="foot">个人作品，仅供学习交流 · 数据归你所有，请妥善保管导出文件<br>
+  <a href="https://github.com/leyu3574-spec/claude-chat-viewer">GitHub</a> · v2.0</p>
+</div>
 </body>
 </html>
