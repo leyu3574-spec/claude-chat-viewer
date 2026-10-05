@@ -1,6 +1,6 @@
 # Claude 对话浏览器 · 本地离线
 
-> 🚀 **在线试用**：https://leyu3574-spec.github.io/claude-chat-viewer/claude-chat-viewer-2_0_rgon.html（打开即用，无需下载）
+> 🚀 **在线试用**：https://leyu3574-spec.github.io/claude-chat-viewer/（打开即用，无需下载）
 
 一个单文件、完全离线的 Claude 对话记录查看器。把从 Claude 官方导出的数据包拖进来，就能在本地优雅地浏览、搜索全部历史对话。
 
