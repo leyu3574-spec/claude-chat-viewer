@@ -26,7 +26,7 @@
 
 ### 第二步：用查看器打开
 
-1. 双击用浏览器打开 `claude-chat-viewer-2_0_rgon.html`
+1. 双击用浏览器打开 `claude-chat-viewer-3.6_1_r0k2.html`（当前版本 v3.6）
 2. 把下载的 zip 包（或解压得到的 `conversations.json`）直接**拖进页面**，也可以点击选择文件
 3. 等待解析完成，即可浏览、搜索全部对话
 
